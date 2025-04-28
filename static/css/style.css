@@ -1,0 +1,277 @@
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background-color: #f3f3f9; /* Subtle background color */
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* Ensure the main section takes up full height */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3); /* Gradient for navbar */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for pop */
+    z-index: 1000;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f3f3f9;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Content section */
+.content {
+    padding: 50px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4); /* Soft gradient background */
+    flex-grow: 1;
+    color: white;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Uploader box */
+.uploader {
+    border: 3px dashed #ff7eb3;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.uploader:hover {
+    background-color: #fff;
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.uploader p {
+    font-size: 1.3rem;
+    color: #ff758c;
+}
+
+/* Loader */
+.loader {
+    font-size: 1.4rem;
+    color: #555;
+    display: none;
+}
+
+/* Image container */
+.uploaded-image, .processed-image {
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Added shadow */
+}
+
+/* Processing actions */
+.processing-actions {
+    margin-top: 2rem;
+    display: none;
+    gap: 10px;
+    justify-content: center;
+}
+
+.processing-actions button {
+    background-color: #ff758c;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.processing-actions button:hover {
+    background-color: #ff557b;
+    transform: translateY(-5px);
+}
+
+/* Image container for uploaded/processed images */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.image-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.5rem;
+    border: 2px solid #ff758c;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-10px); /* More pronounced hover effect */
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Home page styles */
+.home-container {
+    text-align: center;
+    padding: 6rem 0;
+    background-color: #f7f7f9;
+}
+
+.hero {
+    background: linear-gradient(135deg, #f093fb, #f5576c); /* Hero gradient */
+    padding: 4rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for hero */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+
+/* Updated Button Styles */
+.processing-actions button, .cta-button {
+    background: linear-gradient(135deg, #16a085, #1abc9c); /* Professional gradient */
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.processing-actions button:hover, .cta-button:hover {
+    background: linear-gradient(135deg, #1abc9c, #0e8678); /* Slightly darker hover state */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.processing-actions button:active, .cta-button:active {
+    background: #0e8678; /* Darkest shade on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ff758c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff557b;
+}
